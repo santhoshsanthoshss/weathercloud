@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather app</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Weather Application</h1>
+         <img src="https://wallpapercave.com/wp/wp2610927.jpg"> 
+    </div>
+    
+    <div class="world">
+        <h1>World Weather Report</h1>
+        <p>Uses openweather API and Provides live weather Report based on the city you provide.</p>
+    </div>
+   
+    <form action="/" method="post">
+    <h3>City Name</h3>
+    <input type="text" name="city" class="empty" placeholder="Enter the City">
+    
+    </form>
+    
+ <div class="result">
+     <% if(temp !== null) {%>
+        <h1 class="temp"> Temp: <%= temp %></h1>
+        <% } %>
+
+        <% if(des !== null) {%>
+            <h3 class="des"> Description: <%= des %></h3>
+            <% } %>
+
+            <% if(city !== null) {%>
+                <h4 class="city"> City: <%= city %></h4>
+                <% } %>
+                
+            <% if(temp_min !== null) {%>
+                <h4 class="temp_min"> Temp_min: <%= temp_min %></h4>
+                <% } %>
+
+                
+            <% if(temp_max !== null) {%>
+                <h4 class="temp_max" > Temp_max:  <%= temp_max %></h4>
+                <% } %>
+
+                
+            <% if(speed !== null) {%>
+                <h4 class="speed"> Speed: <%= speed %></h4>
+                <% } %>
+
+                       
+            <% if(humidity !== null) {%>
+                <h4 class="humidity"> Humidity:  <%= humidity %></h4>
+                <% } %>
+                
+                <div class="copy">
+                    <!-- <img src="https://media.istockphoto.com/photos/blue-sky-and-white-clouds-background-picture-id825778252?b=1&k=20&m=825778252&s=170667a&w=0&h=jdnxK2NDwfdGvzzK3PTExB49HwLtrEZu27aB5qp_uxg="> -->
+                
+                </div> 
+              
+ </div>
+    </div>
+       
+</body>
+</html>
